@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
+  "id": "sammy99jsp",
+  "version": "0.0.1",
 
-  "name": "Example Mod",
+  "name": "Sammy99jsp",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "Sammy99jsp"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://sammy99jsp.dev",
+    "sources": "https://github.com/Sammy99jsp/fabric"
   },
 
   "license": "CC0-1.0",
@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "dev.sammy99jsp.fabric.Mod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "sammy99jsp.mixins.json"
   ],
 
   "depends": {

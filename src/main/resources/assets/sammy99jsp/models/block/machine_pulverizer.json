@@ -1,0 +1,6 @@
+{
+  "parent": "sammy99jsp:block/machine_base",
+  "textures": {
+    "north": "sammy99jsp:block/machine/machine_pulverizer"
+  }
+}

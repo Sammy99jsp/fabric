@@ -1,1 +1,8 @@
-{}
+{
+    "mod.name": "Sammy99jsp",
+    "mod.rei.test_name": "What the heck!",
+    "mod.rei.category": "Pulverizing",
+    "block.sammy99jsp.machine_pulverizer": "Pulverizer (UNSTABLE)",
+    "mod.integrations.jade.machine.empty": "Empty",
+    "config.jade.plugin_sammy99jsp.machine_pulverizer": "Pulverizer (UNSTABLE)"
+}

@@ -1,8 +1,10 @@
 pluginManagement {
     repositories {
+        
         maven {
-            name = 'Fabric'
-            url = 'https://maven.fabricmc.net/'
+            // location of a maven mirror for JEI files, as a fallback
+            name = "ModMaven"
+            url = "https://modmaven.dev"
         }
         mavenCentral()
         gradlePluginPortal()

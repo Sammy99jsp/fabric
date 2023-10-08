@@ -8,18 +8,24 @@ import dev.sammy99jsp.fabric.util.machine.MachineIO;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 
 // TODO(@Sammy99jsp): Implement SidedInventory! 
 
-public abstract class MachineTile extends BlockEntity implements ModInventory {
+public abstract class MachineTile extends BlockEntity implements ModInventory, NamedScreenHandlerFactory {
     protected final MachineIO io;
 
     public MachineTile(BlockEntityType<?> type, BlockPos pos, BlockState state, MachineIO io) {
@@ -76,4 +82,13 @@ public abstract class MachineTile extends BlockEntity implements ModInventory {
         return this.io.getItems();
     }
 
+    /// Screen Handler things
+    
+    @Override
+    public Text getDisplayName() {
+        return new TranslatableText(this.getCachedState().getBlock().getTranslationKey());
+    }
+
+    @Override
+    public abstract ScreenHandler createMenu(int syncId, PlayerInventory playerInv, PlayerEntity player);
 }

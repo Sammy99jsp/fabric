@@ -22,7 +22,7 @@ public enum MachinePulveriserJade implements IBlockComponentProvider {
         MachinePulverizerTile ent = (MachinePulverizerTile)block.getBlockEntity();
 
         IElementHelper elements = tooltip.getElementHelper();
-        IElement icon = elements.item(new ItemStack(Items.REDSTONE), 1.0f);
+        IElement icon = elements.item(new ItemStack(Items.REDSTONE), 0.75f);
         tooltip.add(icon);
         
         tooltip.append(Text.of("Power: " + ent.getPower()));

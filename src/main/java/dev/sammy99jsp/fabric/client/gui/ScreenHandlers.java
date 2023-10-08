@@ -1,6 +1,8 @@
 package dev.sammy99jsp.fabric.client.gui;
 
 import dev.sammy99jsp.fabric.Mod;
+import dev.sammy99jsp.fabric.client.gui.machine.handler.MachinePulverizerScreenHandler;
+import dev.sammy99jsp.fabric.client.gui.machine.screen.MachinePulverizerScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
@@ -11,9 +13,9 @@ import net.minecraft.util.registry.Registry;
 import  net.minecraft.client.gui.screen.ingame.ScreenHandlerProvider;;
 
 public class ScreenHandlers {
-    // public static ScreenHandlerType<PulverizerScreenHandler> PULVERIZER = register(
-    //     "machine_pulverizer", PulverizerScreenHandler::new, PulverizerScreen::new
-    //     );
+    public static ScreenHandlerType<MachinePulverizerScreenHandler> PULVERIZER = register(
+        "machine_pulverizer", MachinePulverizerScreenHandler::new, MachinePulverizerScreen::new
+        );
 
     private static <S extends ScreenHandler, T extends Screen & ScreenHandlerProvider<S>> ScreenHandlerType<S> register(
         String name, ScreenHandlerType.Factory<S> factory, HandledScreens.Provider<S, T> provider
